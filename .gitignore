@@ -1,4 +1,6 @@
+spell/
 backup/
 plugged/
 
+.netrwhist
 .init.vim-rplugin~
