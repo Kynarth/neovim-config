@@ -13,6 +13,15 @@ set softtabstop=4           " Number of space deleted by the spacebar
 set display+=lastline       " Show complety lines that are too long
 set clipboard=unnamedplus   " copy/paste available from the clipboard
 
+" Spelling configuration
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
 "=============================================================================="
 "                                  Display                                     "
 "=============================================================================="

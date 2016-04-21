@@ -9,9 +9,12 @@ let mapleader = ","
 " Set shortcut for special paste to avoid extra tabs
 set pastetoggle=<F2>
 
-" Set shortcut for spellchecking
-nnoremap <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
-nnoremap <silent> <F8> "<Esc>:silent setlocal spell! spelllang=fr<CR>"
+" Set shortcut for spellchecking english and french
+imap <F3> :setlocal spell! spelllang=en<CR>
+nmap <F3> :setlocal spell! spelllang=en<CR>
+
+imap <F4> :setlocal spell! spelllang=fr<CR>
+nmap <F4> :setlocal spell! spelllang=fr<CR>
 
 " Set shortcut for displaying the Nerdtree
 nnoremap <silent> <F9> :NERDTreeToggle<CR>

@@ -123,3 +123,8 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 " Set google style for python snippets
 let g:ultisnips_python_style = "google"
+
+"=============================================================================="
+"                                   TernJS                                     "
+"=============================================================================="
+au BufNewFile,BufRead .tern-project set filetype=json
