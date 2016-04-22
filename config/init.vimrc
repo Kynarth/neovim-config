@@ -6,17 +6,17 @@ call plug#begin('~/.config/nvim/plugged')
 
 " ========== Miscellaneous ==========
 Plug 'SirVer/ultisnips'
-Plug 'cohama/lexima.vim'
+Plug 'benekastah/neomake'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-fugitive'
+Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim'
 Plug 'wakatime/vim-wakatime'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar',   { 'on': 'TagbarToggle' }
-Plug 'benekastah/neomake'
 
 " ========== Appearance ============
 Plug 'itchyny/lightline.vim'

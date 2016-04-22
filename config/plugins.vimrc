@@ -60,43 +60,6 @@ let g:racer_cmd = '/home/kynarth/.cargo/bin/racer'
 let $RUST_SRC_PATH = '/home/kynarth/.local/src/rust/src'
 
 "=============================================================================="
-"                                  Python-mode                                 "
-"=============================================================================="
-let g:pymode_rope = 0               " On/Off Rope
-let g:pymode_python = 'python3'     " Python version
-
-" Documentation
-let g:pymode_doc = 1                " On/Off documentation script
-let g:pymode_doc_bind = 'K'         " Key to show selection documentation 
-
-"Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checkers = ['pep8', 'pylint', 'pyflakes']
-
-" Auto open cwindow (quickfix) if any errors have been found
-let g:pymode_lint_cwindow = 0 
-
-" Auto check on save
-let g:pymode_lint_write = 1
-
-" Support virtualenv
-let g:pymode_virtualenv = 1
-
-" Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_key = '<leader>b'
-
-" syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
-" Don't autofold code
-let g:pymode_folding = 0
-
-
-"=============================================================================="
 "                                     TagBar                                   "
 "=============================================================================="
 " Add rust support
@@ -137,6 +100,8 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 "                                   Neomake                                    "
 "=============================================================================="
 autocmd! BufWritePost,BufEnter * Neomake
+
+let g:tern_map_keys=1
 
 let g:neomake_python_enabled_makers = ['pylint', 'pep8']
 let g:neomake_rust_enabled_makers = ['rustc']
