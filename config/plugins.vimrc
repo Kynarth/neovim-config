@@ -132,3 +132,27 @@ let g:tern_show_argument_hints = 'on_hold'
 let g:tern_show_signature_in_pum = 1
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+"=============================================================================="
+"                                   Neomake                                    "
+"=============================================================================="
+autocmd! BufWritePost,BufEnter * Neomake
+
+let g:neomake_python_enabled_makers = ['pylint', 'pep8']
+let g:neomake_rust_enabled_makers = ['rustc']
+let g:neomake_javascript_enabled_makers = ['jscs']
+
+let g:neomake_javascript_jscs_maker = {
+    \ 'exe': 'jscs',
+    \ 'args': ['--no-color', '--preset', 'airbnb', '--reporter', 'inline', '--esnext'],
+    \ 'errorformat': '%f: line %l\, col %c\, %m',
+    \ }
+
+let g:neomake_warning_sign = {
+  \ 'text': 'W',
+  \ 'texthl': 'WarningMsg',
+  \ }
+let g:neomake_error_sign = {
+  \ 'text': 'E',
+  \ 'texthl': 'ErrorMsg',
+  \ }

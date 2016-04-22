@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " ========== Miscellaneous ==========
 Plug 'SirVer/ultisnips'
+Plug 'cohama/lexima.vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-cucumber'
@@ -15,6 +16,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar',   { 'on': 'TagbarToggle' }
+Plug 'benekastah/neomake'
 
 " ========== Appearance ============
 Plug 'itchyny/lightline.vim'
@@ -27,7 +29,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
 " ========== Python =================
-Plug 'klen/python-mode'
+"Plug 'klen/python-mode'
 Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
 
