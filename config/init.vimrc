@@ -29,7 +29,7 @@ Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
 " ========== Python =================
-"Plug 'klen/python-mode'
+Plug 'hynek/vim-python-pep8-indent'
 Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
 
