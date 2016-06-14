@@ -103,10 +103,18 @@ autocmd! BufWritePost,BufEnter * Neomake
 
 let g:tern_map_keys=1
 
+" Python
 let g:neomake_python_enabled_makers = ['pylint', 'pep8']
-let g:neomake_rust_enabled_makers = ['rustc']
-let g:neomake_javascript_enabled_makers = ['jscs']
 
+" Rust
+let g:neomake_rust_enabled_makers = ['rustc']
+
+" C++
+let g:neomake_cpp_enable_markers=['clang']
+let g:neomake_cpp_clang_args = ["-std=c++14", "-Wextra", "-Wall", "-fsanitize=undefined","-g"]
+
+" Javascript
+let g:neomake_javascript_enabled_makers = ['jscs']
 let g:neomake_javascript_jscs_maker = {
     \ 'exe': 'jscs',
     \ 'args': ['--no-color', '--preset', 'airbnb', '--reporter', 'inline', '--esnext'],

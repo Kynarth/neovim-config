@@ -7,7 +7,7 @@ set tabstop=4               " Set number of spaces for tabs
 set expandtab               " Convert tabs in spaces
 set shiftround              " Round indentation in a multiple of shiftwidth
 set noshowmode              " Hide current mode Ex: Insert, Normal or Visual
-set ignorecase              " Make searching case insensitive 
+set ignorecase              " Make searching case insensitive
 set shiftwidth=4            " Number of caracter indented with reindent ops
 set softtabstop=4           " Number of space deleted by the spacebar
 set display+=lastline       " Show complety lines that are too long
@@ -16,7 +16,7 @@ set clipboard=unnamedplus   " copy/paste available from the clipboard
 "=============================================================================="
 "                                  Display                                     "
 "=============================================================================="
-set title                   " Update terminal title 
+set title                   " Update terminal title
 set number                  " Show line number
 set ruler                   " Show cursor's position
 set wrap                    " Show too long lines
@@ -68,3 +68,6 @@ let g:python_host_skip_check = 1
 
 " True color terminal support
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Remove all trailing whitespace automatically
+autocmd BufWritePre * :%s/\s\+$//e
