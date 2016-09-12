@@ -18,31 +18,33 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar',   { 'on': 'TagbarToggle' }
 
-" ========== Appearance ============
+" =========== Appearance ===========
 Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 
-" ========== Javascript =============
+" =========== Javascript ===========
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'mhartington/deoplete-typescript', { 'for': ['javascript', 'javascript.jsx', 'typescript.ts'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
-" ========== Python =================
+" ============= Python =============
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'davidhalter/jedi'
 Plug 'zchee/deoplete-jedi'
 
-" ========== Rust ===================
+" ============== Rust ==============
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim',
 Plug 'racer-rust/vim-racer'
 
-" ========== Mardown ================
+" ============= Mardown =============
 Plug 'godlygeek/tabular', { 'for': 'markdown' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'suan/vim-instant-markdown', { 'for': 'markdown'}
 
-" ========== HTML/CSS ===============
+" ============= HTML/CSS ============
 Plug 'mattn/emmet-vim'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-ragtag'

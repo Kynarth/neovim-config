@@ -4,8 +4,14 @@
 " Make deoplete launch at startup
 let g:deoplete#enable_at_startup = 1
 
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+
 " Disable automatic autocompletion
 let g:deoplete#disable_auto_complete = 1
+
+let g:deoplete#enable_ignore_case = 1
 
 "=============================================================================="
 "                                 Lightline                                    "
@@ -36,15 +42,24 @@ let g:lightline = {
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = '<C-Space>'
 
-" Jedi displays function call signatures in insert mode in real-time, 
+" Jedi displays function call signatures in insert mode in real-time,
 " highlighting the current argument.
 let g:jedi#show_call_signatures = 0
 
 "=============================================================================="
-"                               Vim-Markdown                                   "
+"                                   Markdown                                   "
 "=============================================================================="
 " Use :InstantMarkdownPreview to launch preview
 let g:instant_markdown_autostart = 0
+
+" Disable folding
+let g:vim_markdown_folding_disabled = 1
+
+" Highlight for the following filetype
+let g:vim_markdown_fenced_languages = ['python=py', 'rust=rs', 'javascript=js']
+
+" Highlight TOML syntax
+let g:vim_markdown_toml_frontmatter = 1
 
 "=============================================================================="
 "                                    Emmet                                     "
@@ -88,13 +103,19 @@ let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 let g:ultisnips_python_style = "google"
 
 "=============================================================================="
-"                                   TernJS                                     "
+"                                     Tern                                     "
 "=============================================================================="
-au BufNewFile,BufRead .tern-project set filetype=json
-let g:tern_show_argument_hints = 'on_hold'
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
 let g:tern_show_signature_in_pum = 1
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+let g:tern_show_argument_hints = 'on_hold'
+au BufNewFile,BufRead .tern-project set filetype=json
 autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+"=============================================================================="
+"                                  Typescript                                  "
+"=============================================================================="
+let g:deoplete#sources#tss#javascript_support = 1
 
 "=============================================================================="
 "                                   Neomake                                    "
@@ -114,12 +135,9 @@ let g:neomake_cpp_enable_markers=['clang']
 let g:neomake_cpp_clang_args = ["-std=c++14", "-Wextra", "-Wall", "-fsanitize=undefined","-g"]
 
 " Javascript
-let g:neomake_javascript_enabled_makers = ['jscs']
-let g:neomake_javascript_jscs_maker = {
-    \ 'exe': 'jscs',
-    \ 'args': ['--no-color', '--preset', 'airbnb', '--reporter', 'inline', '--esnext'],
-    \ 'errorformat': '%f: line %l\, col %c\, %m',
-    \ }
+let g:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe=substitute(g:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 
 let g:neomake_warning_sign = {
   \ 'text': 'W',
