@@ -71,3 +71,6 @@ let g:python_host_skip_check = 1
 
 " Remove all trailing whitespace automatically
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Treat ejs file like html ones
+autocmd BufRead,BufNewFile *.ejs setfiletype html
