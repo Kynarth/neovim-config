@@ -28,6 +28,7 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'mhartington/deoplete-typescript', { 'for': ['javascript', 'javascript.jsx', 'typescript.ts'] }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'posva/vim-vue'
 
 " ============= Python =============
 Plug 'hynek/vim-python-pep8-indent'
